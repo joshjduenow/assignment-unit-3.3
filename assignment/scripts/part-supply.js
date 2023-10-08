@@ -11,7 +11,7 @@ console.log('Parts needed:', partsNeeded);
 // 2. Create a variable called 'supplyChanges' whose value is an array containing
 //    the following numbers: 3, 5, -6, 0, 7, 11.
 console.log('2. Create supplyChanges:');
-let supplyChanges = [ 3, 5, -6, 0, 7, 11];
+let supplyChanges = [3, 5, -6, 0, 7, 11];
 console.log('Supply changes array:', supplyChanges);
 
 // 3. Create a variable called 'secondItem' and assign it the value of the second
@@ -43,6 +43,22 @@ console.log('6. Looping through supplyChanges to populate arrays with positive, 
 let positives = [];
 let negatives = [];
 let zeroes = [];
+for (let i = 0; i < supplyChanges.length; i++) {
+  const value = supplyChanges[i];
+
+  if (value > 0) {
+    positives.push(value);
+  } 
+  else if (value < 0) {
+    negatives.push(value);
+  } 
+  else {
+    zeroes.push(value);
+  }
+}
+console.log('Positive Numbers:', positives);
+console.log('Negative Numbers:', negatives);
+console.log('Zeroes:', zeroes);
 
 // ***** STRETCH GOALS *********************************************
 // 7. Rewrite the 'for' loop from #6 as a 'for...of' loop. Instead of 'positives',
